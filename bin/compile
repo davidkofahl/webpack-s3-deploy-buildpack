@@ -28,7 +28,7 @@ export_env_dir() {
   fi
 }
 
-echo "buildpack"
+export_env_dir
 
-echo "-----> bundle exec rake webpack:compile"
+#echo "-----> bundle exec rake webpack:compile"
 #bundle exec rake webpack:compile
