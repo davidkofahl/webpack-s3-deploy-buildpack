@@ -1,11 +1,6 @@
 #!/bin/bash
 # -*- shell-script -*-
 
-# Run the webpack-rails rake task `webpack:compile`.
-#
-# This compiles assets to `public/webpack` when using default
-# configuration.
-
 build_dir=$1
 cache_dir=$2
 env_dir=$3
@@ -30,8 +25,5 @@ export_env_dir() {
 
 export_env_dir
 
-echo "source"
-echo "$SOURCE_VERSION"
-
-#echo "-----> bundle exec rake webpack:compile"
-#bundle exec rake webpack:compile
+echo "RELEASE ID -- $SOURCE_VERSION"
+export $RELEASE_ID=$SOURCE_VERSION
