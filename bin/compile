@@ -26,4 +26,5 @@ export_env_dir() {
 export_env_dir
 
 echo "RELEASE ID -- $SOURCE_VERSION"
-export "$RELEASE_ID=$SOURCE_VERSION"
+echo "SLUG -- $HEROKU_SLUG_COMMIT"
+export "RELEASE_ID=$SOURCE_VERSION"
