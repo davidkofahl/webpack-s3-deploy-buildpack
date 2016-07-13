@@ -26,4 +26,4 @@ export_env_dir() {
 export_env_dir
 
 echo "RELEASE ID -- $SOURCE_VERSION"
-export $RELEASE_ID=$SOURCE_VERSION
+export "$RELEASE_ID=$SOURCE_VERSION"
