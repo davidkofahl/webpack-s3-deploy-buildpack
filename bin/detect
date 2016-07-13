@@ -1,13 +1,10 @@
-#!/bin/sh
-# -*- shell-script -*-
+#!/usr/bin/env bash
+# bin/detect <build-dir>
 
-# Assume this project uses webpack-rails gem if it exposes the
-# "webpack:compile" Rake task.
-#
-# `grep` will set the significant exit code accordingly.
+if [ -f $1/package.json ]; then
+  echo "Node.js"
+  exit 0
+fi
 
-echo "webpack-rails"
+exit 1
 
-build_dir=$1
-
-grep 'webpack-rails' < $build_dir/Gemfile > /dev/null
