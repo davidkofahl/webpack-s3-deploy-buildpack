@@ -20,7 +20,7 @@ export_env_dir() {
   if [ -d "$env_dir" ]; then
     for e in $(ls $env_dir); do
 	  echo "HEYYYYYY"
-	  git rev-parse --short HEAD
+	  curl -n https://api.heroku.com/apps/startup-staging/releases
       echo "$e" | grep -E "$whitelist_regex" | grep -qvE "$blacklist_regex" &&
       export "$e=$(cat $env_dir/$e)"
       :
